@@ -161,7 +161,9 @@ class ChatClaudeCode(BaseChatModel):
             + json.dumps(self.tools, indent=1)
             + "\n\nTo call tools, put them in tool_calls with their arguments and leave "
             "content empty; their results come back in the next turn. Once you have the "
-            "data you need, return an empty tool_calls and your full answer in content."
+            "data you need, return an empty tool_calls and your full answer in content. "
+            "That content is the only text the reader sees, so write it out completely "
+            "and never refer to earlier messages such as 'see above'."
         )
         out = self._run(system, prompt, _TOOL_REPLY_SCHEMA).get("structured_output") or {}
         known = {t["name"] for t in self.tools}
