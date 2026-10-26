@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone --depth 1 -b claude-code-provider https://github.com/weiyueli7/tradingagents *)",
+      "Bash(pip install *)",
+      "Bash(python -c *)",
+      "Bash(tradingagents *)"
+    ]
+  }
+}
