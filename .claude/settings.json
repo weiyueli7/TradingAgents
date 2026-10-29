@@ -1,10 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git clone --depth 1 -b claude-code-provider https://github.com/weiyueli7/tradingagents *)",
-      "Bash(pip install *)",
-      "Bash(python -c *)",
-      "Bash(python3 *)",
+      "Bash(python3 -m pip install -q .)",
+      "Bash(python3 -c *)",
       "Bash(tradingagents *)"
     ]
   }
